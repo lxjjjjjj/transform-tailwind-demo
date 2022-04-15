@@ -1,0 +1,188 @@
+<template>
+  <view class="list">
+    <view wx:for="{{listData}}" wx:key="index">{{item}}</view>
+  </view>
+  <view class="wallet-wrapper" id="id-style"></view>
+  <view class="wallet-cutting-line"></view>
+  <view class="wallet-icons"></view>
+  <view class="wallet-icon-img"></view>
+  <view class="wallet-icon-item"></view>
+  <view class="wallet-icon-text"></view>
+  <view class="wallet-card-item-wrapper"></view>
+  <view class="wallet-text-unit"></view>
+  <view class="wallet-gray-area"></view>
+  <view class="item-tag-text"></view>
+  <view class="wallet-text-subTitle"></view>
+  <view class="wallet-hot-wrap"></view>
+</template>
+
+<script>
+  import { createComponent } from '@mpxjs/core'
+
+  createComponent({
+    data: {
+      listData: ['手机', '电视', '电脑']
+    }
+  })
+</script>
+
+<style lang="stylus">
+  #id-style
+    background-color #f00
+  @media screen and (min-width: 480px) {
+    list {
+        background-color: lightgreen;
+    }
+  }
+  .list
+    background-color red
+    height 100px
+    width 300px
+  .wallet-card
+    margin-top 8px
+    height 167px
+  .wallet-wrapper
+    padding-top 20px
+  .wallet-cutting-line
+    width 609rpx
+    height 1rpx
+    border-top 1rpx dashed #D9DEE2
+    position: absolute;
+    left 50%
+    top 50%
+    transform translate(-50%,-50%)
+  .wallet-icons
+    display flex
+    flex-wrap nowrap
+    justify-content space-between
+    padding-bottom 5px
+    padding-right 15px
+    padding-left 15px
+  .wallet-icon-item
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+    width 25%
+    position relative
+  .wallet-icon-img
+    width 30px
+    height 30px
+  .wallet-icon-text
+    font-family PingFangSC-Medium
+    font-size 12px
+    color #000000
+    font-weight 500
+    margin-top 4px
+  .wallet-text
+    display flex
+    flex-wrap nowrap
+    justify-content space-between
+    height 60px
+    padding-top 7px
+    padding-right 15px
+    padding-left 15px
+  .wallet-text-item
+    width 25%
+    position relative
+    text-align center
+    padding-top 10px
+  .wallet-card-item-wrapper
+    position relative
+  .wallet-text-text
+    font-family DINAlternate-Bold
+    font-size 20px
+    color #080808
+    text-align left
+    font-weight 700
+    display inline-block
+  .wallet-text-unit
+    font-family PingFangSC-Regular
+    font-size 10px
+    color #000000
+    text-align left
+    font-weight 400
+    padding-left 2px
+    display inline-block !important
+  .item-tag-text
+    position absolute
+    top -6px;
+    left 48.5px
+    font-family PingFangSC-Semibold
+    font-size 9px
+    color #fff
+    background-image linear-gradient(90deg, #FF8635 0%, #FF5C1B 100%)
+    border-radius 8px
+    padding 1px 4px
+    border-bottom-left-radius 2px
+    white-space nowrap
+    opacity 0.9
+  .wallet-gray-area
+    width 30px
+    height 30px
+    border-radius 50%
+    background #DDDDDD
+    position absolute
+    left 50%
+    top 40%
+    transform translate(-50%,-50%)
+  .wallet-text-icon
+    width 16px
+    height 16px
+    color #d8d8d8
+    display inline-block !important
+    position absolute
+    bottom: 0;
+    text-align center
+    line-height 16px
+  .wallet-text-subTitle
+    font-family PingFangSC-Regular
+    font-size 12px
+    color #444444
+    text-align center
+    font-weight 400
+  .wallet-text-gray
+    font-family PingFangSC-Regular
+    font-size 14px
+    color #444444
+    text-align center
+    font-weight 400
+    margin-top 5px
+    position absolute
+    left 50%
+    transform translate(-50%, -50%)
+    bottom -12px
+    width 100%
+  .wallet-red-dot
+    position absolute
+    top: 2px
+    right 60rpx
+    width 5px
+    height 5px
+    border 1px solid #fff
+    border-radius 50%
+    //transform translate(50%, -50%)
+    background-color #FF5C1B
+  .wallet-hot-wrap
+    position absolute
+    padding-left 4px
+    padding-right 4px
+    top 0px
+    right 12px
+    height: 14px
+    line-height 14px
+    max-width: 4em
+    color #fff
+    font-size 9px
+    overflow hidden
+    white-space nowrap
+    border 1px solid #fff
+    border-radius: 7px 7px 7px 2px
+    background-image: linear-gradient(179deg, #FF8635 0%, #FF5C1B 100%)
+</style>
+
+<script type="application/json">
+  {
+    "component": true
+  }
+</script>
